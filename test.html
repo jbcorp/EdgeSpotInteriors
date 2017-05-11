@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+      <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style> 
+    <style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+    </head>
+    
+<body>
+ 
+
+
+  
+  <!--script src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyBCPkSD3tel22R0hsXKZYd31vpRtI3txxQ" async="" defer="defer" type="text/javascript"></script-->
+  <div style="overflow:hidden;height:300px;width:100%;"><div id="gmap_canvas" style="height:300px;width:100%;"></div>
+  </div>
+  <script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(18.601264, 73.794859),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(18.601264, 73.794859)});infowindow = new google.maps.InfoWindow({content:"<b>EDGE Spot Interiors</b><br/>Office No-13, Shyama Kunjir Prestige, Opp. Vijay Sales, Pimple Saudagar, 411027<br/> Pune" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCPkSD3tel22R0hsXKZYd31vpRtI3txxQ&callback=init_map" async="" defer="defer" type="text/javascript"></script>
+
+
+<!--div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 18.601264, lng: 73.794859};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async="" defer="defer"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCPkSD3tel22R0hsXKZYd31vpRtI3txxQ&callback=initMap">
+    </script-->
+    </body>
+     
+</html>
